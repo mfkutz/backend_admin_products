@@ -25,7 +25,7 @@ connectDB();
 const server = express();
 
 //Permitir conexiones
-/* const corsOptions: CorsOptions = {
+const corsOptions: CorsOptions = {
   origin: function (origin, callback) {
     // console.log(origin);
     if (origin === process.env.FRONTEND_URL) {
@@ -35,12 +35,12 @@ const server = express();
       callback(new Error("CORS Error"));
     }
   },
-}; */
+};
 
-const corsOptions: CorsOptions = {
+/* const corsOptions: CorsOptions = {
   origin: [process.env.FRONTEND_URL],
   credentials: true, // Habilita el envío de cookies
-};
+}; */
 
 server.use(cors(corsOptions));
 
